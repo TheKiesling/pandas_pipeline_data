@@ -9,3 +9,4 @@ class Publisher:
             dataframe.to_excel(file_name, index=False)
         elif self.file_type == 'json':
             dataframe.to_json(file_name, orient='records', lines=True)
+
