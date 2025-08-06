@@ -1,9 +1,11 @@
 import pandas as pd
 
-filename = 'extracted_files/airlines_flights_data.csv'
+def filter_by_city(filename: str, city: str):
+    df = pd.read_csv(filename)
 
-df = pd.read_csv(filename)
+    filtrado = df[df['source_city'].str.contains(city)]
 
-print(df.columns)
+    print(f"\nFilas donde 'source_city' contiene '{city}':")
+    print(filtrado)
 
-print(df[df['source_city'].str.contains("Delhi")])
+    return filtrado
