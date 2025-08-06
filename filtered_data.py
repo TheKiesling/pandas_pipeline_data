@@ -9,3 +9,7 @@ def filter_by_city(filename: str, city: str):
     print(filtrado)
 
     return filtrado
+
+if __name__ == "__main__":
+    filename = "extracted_files/airlines_flights_data.csv"
+    filter_by_city(filename, "Delhi")
